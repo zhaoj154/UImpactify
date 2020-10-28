@@ -1,0 +1,36 @@
+The status sending logic need to be fixed.
+When I register a new user with
+localhost:4000/api/register
+{
+  "name": "Jay Z",
+  "email": "jay@gmail.com",
+  "password": "jay2020",
+  "role": "STUDENT"
+}
+
+login with 
+localhost:4000/api/login
+{
+  "username": "jay@gmail.com",
+  "password": "jay2020"
+}
+expected: {status: 200 OK, body: OKAY}
+actual: {status: 200 OK, body: OKAY} test success
+
+login with 
+localhost:4000/api/login
+{
+  "username": "jay@gmail.com"
+}
+expected: {status: 400 Bad Request, body: BAD REQUEST}
+actual: {status: 404 Not Found, body: DOES NOT EXIST} test failed
+
+login with 
+localhost:4000/api/login
+expected: {status: 404 BAD REQUEST, body: BAD REQUEST}
+{
+  "username": "notExist@gmail.com",
+  "password": "jay2020"
+}
+expected: {status: 404 Not Found, body: DOES NOT EXIST}
+actual: {status: 404 Not Found, body: DOES NOT EXIST} test success

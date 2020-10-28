@@ -1,0 +1,27 @@
+MVC Checklist - sprint1
+
+View:
+frontend/
+frontend/src/pages
+frontend/src/ui-components
+frontend/src/ui-resources
+frontend/src/ui-styles-components
+frontend/src/ui-styles
+frontend/src/ui
+
+Controllers:
+frontend/src/services/authorization/sign-up.js
+frontend/src/services/authorization/sign-in.js
+backend/server.js
+backend/passportConfig.js
+backend/Routes/AuthRoutes.js
+backend/Routes/index.js
+backend/Controllers/Authenticate.js
+backend/Controllers/Routes
+
+Model:
+backend/Model/Schemas/User.js
+backend/Model/UserActions.js
+
+
+MVC structure verified for sprint1
